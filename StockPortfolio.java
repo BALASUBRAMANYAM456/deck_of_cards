@@ -2,59 +2,64 @@ package com.stock.account.management;
 
 public class StockPortfolio {
 
-	// instance variables
-	String stock_name;
-	int num_of_shares;
-	int share_price;
+    //input variables
+    String stockName;
+    int numberOfShares;
+    int priceOfShare;
+    int valueOfStock;
 
-	int val_of_stock;
+    //constructor
 
-	// parameterised constructor
-	public StockPortfolio(String stock_name, int num_of_shares, int share_price, int val_of_stock) {
-		this.stock_name = stock_name;
-		this.num_of_shares = num_of_shares;
-		this.share_price = share_price;
-		this.val_of_stock = val_of_stock;
-	}
+    public StockPortfolio(String stockName, int numberOfShares, int priceOfShare, int valueOfStock) {
+        this.stockName = stockName;
+        this.numberOfShares = numberOfShares;
+        this.priceOfShare = priceOfShare;
+        this.valueOfStock = valueOfStock;
+    }
 
-	// getters and setters methods
-	public String getStock_name() {
-		return stock_name;
-	}
+    //getters and setters
 
-	public void setStock_name(String stock_name) {
-		this.stock_name = stock_name;
-	}
+    public String getStockName() {
+        return stockName;
+    }
 
-	public int getNum_of_shares() {
-		return num_of_shares;
-	}
+    public void setStockName(String stockName) {
+        this.stockName = stockName;
+    }
 
-	public void setNum_of_shares(int num_of_shares) {
-		this.num_of_shares = num_of_shares;
-	}
+    public int getNumberOfShares() {
+        return numberOfShares;
+    }
 
-	public int getShare_price() {
-		return share_price;
-	}
+    public void setNumberOfShares(int numberOfShares) {
+        this.numberOfShares = numberOfShares;
+    }
 
-	public void setShare_price(int share_price) {
-		this.share_price = share_price;
-	}
+    public int getPriceOfShare() {
+        return priceOfShare;
+    }
 
-	public int getVal_of_stock() {
-		return val_of_stock;
-	}
+    public void setPriceOfShare(int priceOfShare) {
+        this.priceOfShare = priceOfShare;
+    }
 
-	public void setVal_of_stock(int val_of_stock) {
-		this.val_of_stock = val_of_stock;
-	}
+    public int getValueOfStock() {
+        return valueOfStock;
+    }
 
-	// overriding toString method to return in user friendly format.
-	@Override
-	public String toString() {
-		return ("Stock name :- " + getStock_name() + " and number of shares :- " + getNum_of_shares() + "\n"
-				+ "          			share price :- " + getShare_price() + "\n"
-				+ "          			value of stock :- " + getVal_of_stock());
-	}
+    public void setValueOfStock(int valueOfStock) {
+        this.valueOfStock = valueOfStock;
+    }
+
+    //to string override method
+
+    @Override
+    public String toString() {
+        return "StockPortfolio{" +
+                "stockName='" + stockName + '\'' +
+                ", numberOfShares=" + numberOfShares +
+                ", priceOfShare=" + priceOfShare +
+                ", valueOfStock=" + valueOfStock +
+                '}';
+    }
 }
